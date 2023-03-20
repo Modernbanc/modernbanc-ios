@@ -42,7 +42,6 @@
 				8A8DCDEF29C7FA1B00E771A3 /* Packages */,
 				8A8DCDDA29C7F99200E771A3 /* demo-app */,
 				8A8DCDD929C7F99200E771A3 /* Products */,
-				8A8DCDF629C7FB6800E771A3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,13 +70,6 @@
 				8A8DCDF429C7FAC000E771A3 /* modernbanc-ios */,
 			);
 			name = Packages;
-			sourceTree = "<group>";
-		};
-		8A8DCDF629C7FB6800E771A3 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
