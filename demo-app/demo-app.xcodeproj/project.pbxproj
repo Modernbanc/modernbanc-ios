@@ -40,7 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				8A8DCDEF29C7FA1B00E771A3 /* Packages */,
-				8A8DCDDA29C7F99200E771A3 /* DemoApp */,
+				8A8DCDDA29C7F99200E771A3 /* demo-app */,
 				8A8DCDD929C7F99200E771A3 /* Products */,
 				8A8DCDF629C7FB6800E771A3 /* Frameworks */,
 			);
@@ -54,7 +54,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8A8DCDDA29C7F99200E771A3 /* DemoApp */ = {
+		8A8DCDDA29C7F99200E771A3 /* demo-app */ = {
 			isa = PBXGroup;
 			children = (
 				8A8DCDDB29C7F99200E771A3 /* AppDelegate.swift */,
@@ -62,7 +62,7 @@
 				8A8DCDDF29C7F99200E771A3 /* ViewController.swift */,
 				8A8DCDE929C7F99300E771A3 /* Info.plist */,
 			);
-			path = DemoApp;
+			path = "demo-app";
 			sourceTree = "<group>";
 		};
 		8A8DCDEF29C7FA1B00E771A3 /* Packages */ = {
@@ -218,6 +218,10 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -271,6 +275,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -295,6 +303,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mdb.demo-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -320,6 +332,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "mdb.demo-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

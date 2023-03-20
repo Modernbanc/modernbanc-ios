@@ -68,7 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         
         stackView.spacing = 20
         
-        label.text = "Input element."
+        label.text = "Input element now."
         label.translatesAutoresizingMaskIntoConstraints = false
         label.backgroundColor = .gray
         NSLayoutConstraint.activate([
