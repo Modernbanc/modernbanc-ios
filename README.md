@@ -1,5 +1,4 @@
 # modernbanc-ios
-The official Swift Library for Modernbanc Elements.
 
 Modernbanc iOS is an official Swift library you can use to securely collect sensitive data from your users and store it in Modernbanc's encrypted vault.
 
