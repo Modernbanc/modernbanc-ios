@@ -24,7 +24,7 @@ DerivedData/
 
 ## Obj-C/Swift specific
 *.hmap
-*.Constants.swift
+Constants.swift
 
 
 
