@@ -42,13 +42,12 @@ final public class ModernbancTextfield: UITextField, UITextFieldDelegate {
             super.text = newValue
             textFieldDidChange()
         }
-        get { super.text }
+        get { return nil }
     }
     
     public func createToken(completionHandler: @escaping (Result<CreateTokenResponse, MdbApiError>) -> Void) {
-        print("Supertext \(super.text)")
         if super.text?.isEmpty == true { return }
-        let body = [["name": elementId, "value": super.text!     ]]
+        let body = [["name": elementId, "value": super.text!]]
         self.client?.request(path: "secrets/tokens", method: .post, body: body, completionHandler: completionHandler)
     }
 

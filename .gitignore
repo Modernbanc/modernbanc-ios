@@ -24,6 +24,9 @@ DerivedData/
 
 ## Obj-C/Swift specific
 *.hmap
+*.Constants.swift
+
+
 
 ## App packaging
 *.ipa

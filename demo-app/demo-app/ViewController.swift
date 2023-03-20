@@ -20,14 +20,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var input: ModernbancTextfield
     
     init() {
-        self.client = ModernbancApiClient(api_key: "nsoPZVAk9EXXx2InwRs6qrWEWVfxaR")
+        self.client = ModernbancApiClient(api_key: mdb_api_key)
         self.label = UILabel()
         self.input = ModernbancTextfield(client: self.client)
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder: NSCoder) {
-        self.client = ModernbancApiClient(api_key: "nsoPZVAk9EXXx2InwRs6qrWEWVfxaR")
+        self.client = ModernbancApiClient(api_key: mdb_api_key)
         self.label = UILabel()
         self.input = ModernbancTextfield(client: self.client)
         super.init(coder: coder)
@@ -106,9 +106,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             switch result {
             case .success(let response):
                 let token = response.result.first
-                print("Successfully created token: \(token)")
+                print("Successfully created token: \(String(describing: token))")
                 DispatchQueue.main.async {
-                    self.label.text = "Input element. Token id:\(token?.id)"
+                    self.label.text = "Input element. Token id:\(String(describing: token?.id))"
                 }
             case .failure(let error):
                 print("Error creating token: \(error)")
