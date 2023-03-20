@@ -81,6 +81,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         input.backgroundColor = .cyan
         input.translatesAutoresizingMaskIntoConstraints = false
         input.placeholder = "Card number"
+        
+        func isLongerThan5Characters(text:String?) -> Bool {
+            return (text?.count ?? 0) > 5
+        }
+        
+        input.validationFn = isLongerThan5Characters
         input.layer.borderColor = .init(red: 0, green: 0, blue: 0, alpha: 1)
         stackView.addArrangedSubview(input)
         

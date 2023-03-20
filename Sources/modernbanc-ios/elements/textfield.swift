@@ -13,9 +13,9 @@ import UIKit
 final public class ModernbancTextfield: UITextField, UITextFieldDelegate {
     
     public var elementId: String = UUID().uuidString
-    var validationFn: ((String?) -> Bool)?
-    var isValid:Bool?
-    var client:ModernbancApiClient?
+    public var validationFn: ((String?) -> Bool)?
+    public var isValid:Bool?
+    public var client:ModernbancApiClient?
     
     public init(client: ModernbancApiClient) {
         self.client = client
@@ -64,9 +64,8 @@ final public class ModernbancTextfield: UITextField, UITextFieldDelegate {
     
     
     @objc func textFieldDidChange() {
-        print("SUPER TEXT DID CHANGE TO \(String(describing: super.text))")
-        if (validationFn != nil) {
-            isValid = validationFn!(text)
+        if let validationFn = validationFn {
+            isValid = validationFn(super.text)
         }
     }
 }
