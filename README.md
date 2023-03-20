@@ -35,14 +35,14 @@ Once the user has entered the details you can create a token from the value in t
     }
 ```
 
-We prevent you from accessing textfield's raw text but if you want to validate the input you can use our `validateFn` in the following way:
+We prevent you from accessing textfield's raw text but if you want to validate the input you can use our `validationFn` in the following way:
 
 ```swift
 func isLongerThan5Characters(text:String?) -> Bool {
     return (text?.count ?? 0) > 5
 }
 
-input.validateFn = isLongerThan5Characters
+input.validationFn = isLongerThan5Characters
 
 input.text = "Hello world"
 
