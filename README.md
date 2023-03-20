@@ -13,7 +13,7 @@ This library contains a ModernbancTextfield component that you can embed into yo
 To use it initialize a Modernbanc API client and then pass it to the textfield.
 
 ```swift
-  let client = ModernbancApiClient(api_key: "Your api key, ensure it permissions to Secrets")
+  let client = ModernbancApiClient(api_key: "Your api key, ensure it has permissions to Secrets functionality")
   let input = ModernbancTextfield(client: client)
 ```
 
@@ -36,9 +36,9 @@ Once the user has entered the details you can create a token from the value in t
 ```
 
 ### Demo app
+
 To run the demo app, open ./demo-app/demo-app.xcodeproj and ensure you've created a Constants.swift with below content:
 
 ```swift
 public let mdb_api_key = "The api key you can get from Modernbanc UI"
 ```
-
