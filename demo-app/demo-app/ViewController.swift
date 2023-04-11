@@ -95,7 +95,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             input.heightAnchor.constraint(equalToConstant: 50)
         ])
         
-        button.setTitle("Create token", for: .normal)
+        button.setTitle("Create secret", for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .gray
         NSLayoutConstraint.activate([
@@ -108,16 +108,16 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     @objc func tokenize() {
-        input.createToken(completionHandler: { (result: Result<CreateTokenResponse, MdbApiError>) in
+        input.createSecret(completionHandler: { (result: Result<CreateSecretResponse, MdbApiError>) in
             switch result {
             case .success(let response):
-                let token = response.result.first
-                print("Successfully created token: \(String(describing: token))")
+                let secret = response.result.first
+                print("Successfully created secret: \(String(describing: secret))")
                 DispatchQueue.main.async {
-                    self.label.text = "Input element. Token id:\(String(describing: token?.id))"
+                    self.label.text = "Input element. Secret id:\(String(describing: secret?.id))"
                 }
             case .failure(let error):
-                print("Error creating token: \(error)")
+                print("Error creating secret: \(error)")
             }})
     }
 

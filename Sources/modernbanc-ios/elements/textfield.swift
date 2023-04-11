@@ -45,10 +45,10 @@ final public class ModernbancTextfield: UITextField, UITextFieldDelegate {
         get { return nil }
     }
     
-    public func createToken(completionHandler: @escaping (Result<CreateTokenResponse, MdbApiError>) -> Void) {
+    public func createSecret(completionHandler: @escaping (Result<CreateSecretResponse, MdbApiError>) -> Void) {
         if super.text?.isEmpty == true { return }
         let body = [["name": elementId, "value": super.text!]]
-        self.client?.request(path: "secrets/tokens", method: .post, body: body, completionHandler: completionHandler)
+        self.client?.request(path: "secrets", method: .post, body: body, completionHandler: completionHandler)
     }
 
 

@@ -18,11 +18,11 @@ public struct MdbApiError: Codable, Error {
     }
 }
 
-public struct CreateTokenResponse: Codable {
-    public let result: [SecretToken]
+public struct CreateSecretResponse: Codable {
+    public let result: [Secret]
 }
 
-public struct SecretToken: Codable {
+public struct Secret: Codable {
     public let id: String
     public let name: String
     public let workspace_id: String

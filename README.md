@@ -17,20 +17,20 @@ To use it initialize a Modernbanc API client and then pass it to the textfield.
   let input = ModernbancTextfield(client: client)
 ```
 
-Once the user has entered the details you can create a token from the value in the textfield.
+Once the user has entered the details you can create a secret from the value in the textfield.
 
 ```swift
     func tokenize() {
-        input.createToken(completionHandler: { (result: Result<CreateTokenResponse, MdbApiError>) in
+        input.createSecret(completionHandler: { (result: Result<CreateSecretResponse, MdbApiError>) in
             switch result {
             case .success(let response):
-                let token = response.result.first
-                print("Successfully created token: \(String(describing: token))")
+                let secret = response.result.first
+                print("Successfully created secret: \(String(describing: secret))")
                 DispatchQueue.main.async {
-                    self.label.text = "Token id:\(String(describing: token?.id))"
+                    self.label.text = "Secret id:\(String(describing: secret?.id))"
                 }
             case .failure(let error):
-                print("Error creating token: \(error)")
+                print("Error creating secret: \(error)")
             }})
     }
 ```
